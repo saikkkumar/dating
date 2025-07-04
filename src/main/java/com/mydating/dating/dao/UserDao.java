@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 
 import com.mydating.dating.entity.User;
 import com.mydating.dating.repository.UserRepository;
-import com.mydating.dating.util.UserGender;
+//import com.mydating.dating.util.UserGender;
 
 @Repository
 public class UserDao {
@@ -21,6 +21,28 @@ public class UserDao {
 		return repository.save(user);
 	}
 
+	public List<User> searchByName(String letters) {
+		
+		return repository.searchByName(letters);
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 //	public List<User> findAllMaleUsers() {
 //		// TODO Auto-generated method stub
 //		return null;

@@ -3,6 +3,7 @@ package com.mydating.dating.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -25,9 +26,19 @@ public class UserController {
 	}
 	
 	
-	@GetMapping("/users/gender/male")
-	public ResponseEntity<?> findAllMaleUsers(){
-		return userService.findAllMaleUsers();
+//	@GetMapping("/users/gender/male")
+//	public ResponseEntity<?> findAllMaleUsers(){
+//		return userService.findAllMaleUsers();
+//	}
+//	
+//	
+////	@GetMapping("/user/gender/female")
+	
+	
+	
+	@GetMapping("/users/search/name/{letters}")
+	public ResponseEntity<?> searchByName(@PathVariable String letters){
+		return userService.searchByName(letters)
 	}
 	
 	
@@ -35,7 +46,13 @@ public class UserController {
 	
 	
 	
-//	@GetMapping("/user/gender/female")
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
